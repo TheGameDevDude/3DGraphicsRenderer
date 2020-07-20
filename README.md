@@ -18,5 +18,5 @@
 Use Mouse to navigate around.
 
 
- ![screenshot](screenshot/screenshot.gif)
+ ![screenshot](screenshot/screenshot.GIF)
 
