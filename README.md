@@ -19,6 +19,5 @@
 #### Mouse
 Use Mouse to navigate around.
 
-
  ![screenshot](screenshot/screenshot.GIF)
 
