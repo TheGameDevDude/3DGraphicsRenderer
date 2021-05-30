@@ -61,15 +61,21 @@ public class Main extends Canvas implements Runnable {
 		long lastTime = System.nanoTime();
 		final double ns = 1000000000.0 / 60.0;
 		double delta = 0;
+		int frames = 0;
+		long lastFrameTime = System.currentTimeMillis();
 		while (running == true) {
 			long now = System.nanoTime();
 			delta = (now - lastTime) / ns;
 			deltaTime = (float) delta;
-			System.out.println("FPS : " + (int) (2 * 60 / deltaTime));
 			lastTime = now;
 			tick();
 			render();
-
+			frames++;
+			if (System.currentTimeMillis() - lastFrameTime > 1000) {
+				System.out.println("FPS:" + frames);
+				lastFrameTime += 1000;
+				frames = 0;
+			}
 		}
 		stop();
 	}
